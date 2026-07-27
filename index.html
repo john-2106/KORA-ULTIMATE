@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KORA_ONE — Assistants média intelligents</title>
+  <meta name="description" content="KORA_ONE — lecture intelligente, recherche rapide et thèmes personnalisés. Lecteur HLS / Xtream intégré." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KORA_ONE",
+    "url": "https://example.com",
+    "description": "KORA_ONE — assistant média intelligent"
+  }
+  </script>
+  <!-- hls.js pour lecture HLS -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.0/dist/hls.min.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <div class="brand" aria-label="KORA_ONE">
+        <svg width="48" height="48" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect width="24" height="24" rx="6" fill="#2563eb"></rect>
+          <text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#fff">K1</text>
+        </svg>
+        <span class="site-title">KORA_ONE</span>
+      </div>
+      <nav class="site-nav" role="navigation" aria-label="Navigation principale">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#player">Player</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1>KORA_ONE</h1>
+          <p class="lead">Ton assistant média intelligent — lecture optimisée, recherche instantanée, thèmes personnalisés. Prêt à l'emploi sur tous les appareils.</p>
+          <p>
+            <a class="cta" href="#player">Ouvrir le player</a>
+            <a class="secondary" href="#features">Découvrir</a>
+          </p>
+        </div>
+        <div class="hero-illu" aria-hidden="true">
+          <svg viewBox="0 0 200 140" width="320" height="224"><rect x="0" y="0" width="200" height="140" rx="12" fill="#f3f4f6"/><circle cx="70" cy="60" r="34" fill="#2563eb" opacity="0.95"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="wrap features" aria-labelledby="features-title">
+      <h2 id="features-title">Fonctionnalités</h2>
+      <div class="grid-3">
+        <article>
+          <h3>Lecture intelligente</h3>
+          <p>Optimisation de contenu pour une lecture fluide et recommandations personnalisées.</p>
+        </article>
+        <article>
+          <h3>Recherche rapide</h3>
+          <p>Recherche instantanée dans tes médias avec filtres et suggestions intelligentes.</p>
+        </article>
+        <article>
+          <h3>Thèmes personnalisés</h3>
+          <p>Change le style et l’apparence pour une expérience sur‑mesure (sombre, claire, etc.).</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="wrap gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Aperçu</h2>
+      <div class="grid-3">
+        <figure><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360'><rect width='100%' height='100%' fill='%23eef2ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23225676'>Aperçu 1</text></svg>" alt="Aperçu 1"></figure>
+        <figure><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360'><rect width='100%' height='100%' fill='%23eefaf1'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23326520'>Aperçu 2</text></svg>" alt="Aperçu 2"></figure>
+        <figure><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360'><rect width='100%' height='100%' fill='%23fff7ed'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23a64a00'>Aperçu 3</text></svg>" alt="Aperçu 3"></figure>
+      </div>
+    </section>
+
+    <!-- Player section: HLS / M3U8 / Xtream -->
+    <section id="player" class="wrap contact" aria-labelledby="player-title">
+      <h2 id="player-title">Player — collez votre flux</h2>
+      <p>Collez l'URL d'un flux HLS (.m3u8) ou utilisez les identifiants Xtream pour construire le lien. (Utilisez uniquement des flux autorisés.)</p>
+
+      <div class="player-grid">
+        <div class="player-controls">
+          <label for="stream-type">Type de flux</label>
+          <select id="stream-type">
+            <option value="hls">HLS / M3U8 (URL directe)</option>
+            <option value="xtream">Xtream (server + user + pass)</option>
+          </select>
+
+          <div id="input-hls">
+            <label for="hls-url">URL du flux (m3u8)</label>
+            <input id="hls-url" placeholder="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="url">
+          </div>
+
+          <div id="input-xtream" style="display:none">
+            <label for="xtream-server">Serveur (ex: http://server:port)</label>
+            <input id="xtream-server" placeholder="http://exemple-xtream.com:8080" type="url">
+            <label for="xtream-user">Nom d'utilisateur</label>
+            <input id="xtream-user" placeholder="username" type="text">
+            <label for="xtream-pass">Mot de passe</label>
+            <input id="xtream-pass" placeholder="password" type="password">
+            <label for="xtream-proto">Format souhaité</label>
+            <select id="xtream-proto">
+              <option value="m3u8">m3u8</option>
+              <option value="ts">ts</option>
+            </select>
+            <small class="muted">Le player construit un lien compatible HLS si disponible. Certains fournisseurs nécessitent une URL d'API différente ; vérifie auprès d'eux.</small>
+          </div>
+
+          <button id="play-btn" class="btn">Lire</button>
+          <p class="form-note" aria-live="polite"></p>
+          <p class="muted">Si le flux ne démarre pas, il est probable que le serveur bloque les requêtes cross‑origin (CORS) — contacte ton fournisseur ou utilise un proxy autorisé.</p>
+        </div>
+
+        <div class="player-area">
+          <video id="video" controls playsinline poster="" style="width:100%;border-radius:12px;background:#000" aria-label="Lecteur vidéo"></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>Remplis le formulaire ci‑dessous et nous te répondrons.</p>
+
+      <form id="contact-form" class="form" method="POST" action="https://formspree.io/f/your-form-id">
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">E‑mail</label>
+        <input id="email" name="_replyto" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+        <p class="form-note" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <p>© KORA_ONE — <small>Site prêt à être déployé</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
