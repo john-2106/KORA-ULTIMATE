@@ -1,0 +1,10 @@
+# netlify.toml pour mapper /api/xtream vers la function xtream-proxy
+[build]
+  publish = "public"
+  command = ""
+
+[[redirects]]
+  from = "/api/xtream"
+  to = "/.netlify/functions/xtream-proxy"
+  status = 200
+  force = true
