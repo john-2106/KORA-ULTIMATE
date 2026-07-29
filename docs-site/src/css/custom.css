@@ -1,0 +1,32 @@
+/**
+ * Styles globaux du site de documentation KORA ONE.
+ * Palette alignée sur la couleur primaire de l'application (#2563eb).
+ */
+
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4fd7;
+  --ifm-color-primary-darker: #1b4bcb;
+  --ifm-color-primary-darkest: #163ea7;
+  --ifm-color-primary-light: #4179ee;
+  --ifm-color-primary-lighter: #4f83ef;
+  --ifm-color-primary-lightest: #779ef3;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #7ea6f7;
+  --ifm-color-primary-dark: #5b8ff5;
+  --ifm-color-primary-darker: #4a83f4;
+  --ifm-color-primary-darkest: #1660ef;
+  --ifm-color-primary-light: #a1bdf9;
+  --ifm-color-primary-lighter: #b2c9fa;
+  --ifm-color-primary-lightest: #e5ecfe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.markdown table {
+  display: table;
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.featureCard {
+  display: block;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.featureCard:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
