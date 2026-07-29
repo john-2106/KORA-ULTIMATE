@@ -1,6 +1,9 @@
 KORA_ONE — Pack prêt à déployer (Standard + Player)
 =================================================
 
+📖 **Documentation technique complète : https://john-2106.github.io/KORA-ULTIMATE/**
+(architecture, player HLS/Xtream, setup, déploiement, roadmap — sources dans `docs-site/`)
+
 Ce pack contient une page statique responsive (index.html + styles + script) et un player qui accepte :
 - URL HLS (.m3u8)
 - Construction simple d'une URL Xtream (server + user + pass)

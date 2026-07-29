@@ -1,0 +1,8 @@
+{
+  "label": "Développement",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Installer, lancer, tester et contribuer au projet."
+  }
+}
